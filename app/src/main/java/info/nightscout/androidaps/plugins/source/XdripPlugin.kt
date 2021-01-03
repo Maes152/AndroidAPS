@@ -31,7 +31,7 @@ class XdripPlugin @Inject constructor(
     aapsLogger, resourceHelper, injector
 ), BgSourceInterface {
 
-    private var advancedFiltering = false
+    private var advancedFiltering = true //false
     private var sensorBatteryLevel = -1
 
     override fun advancedFilteringSupported(): Boolean {
@@ -54,7 +54,7 @@ class XdripPlugin @Inject constructor(
     }
 
     private fun setSource(source: String) {
-        advancedFiltering = source.contains("G5 Native") || source.contains("G6 Native")
+        advancedFiltering = true //source.contains("G5 Native") || source.contains("G6 Native")
     }
 
     override fun getSensorBatteryLevel(): Int {
