@@ -67,6 +67,7 @@ class XdripSourcePlugin @Inject constructor(
             SourceSensor.LIBRE_2_NATIVE,
             SourceSensor.LIBRE_3,
         ).any { it == glucoseValue.sourceSensor }
+        || true
     }
 
     // cannot be inner class because of needed injection
